@@ -1,0 +1,30 @@
+.navtextpay{
+    margin-top:8px;
+    margin-left:4px;
+}
+.nav-link{
+    border-radius: 10px;
+    transition:.2s;
+    margin-left:30px;
+    padding-left:5px;
+
+}
+.nav-link:hover{
+    background-color:grey;
+    color:white;
+}
+.trans-container{
+    background: radial-gradient(circle, rgba(126,156,236,1) 0%, rgba(191,203,217,1) 92%);
+
+}
+.payicon{
+    border-radius: 20px;
+    
+}
+
+.table-container{
+    box-shadow: 2px 2px 20px 1px ;
+    border-radius: 40px;
+    transition: .3s;
+    margin-top:30px;
+}

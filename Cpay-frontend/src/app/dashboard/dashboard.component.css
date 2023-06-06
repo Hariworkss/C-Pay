@@ -1,0 +1,159 @@
+.navbar{
+    /* background-color: #415feb; */
+}
+.navtextpay{
+    margin-top:8px;
+    margin-left:4px;
+}
+.nav-link{
+    border-radius: 10px;
+    transition:.2s;
+    margin-left:30px;
+    padding-left:5px;
+
+}
+.nav-link:hover{
+    background-color:grey;
+    color:white;
+
+
+}
+.navtextc{
+    border-radius: 10px;
+}
+.header-bg{
+    /* width:30em; */
+    border-radius:50px;
+    width:110%;
+    box-shadow: 2px 2px 20px 1px ;
+    transition:.5s;
+    
+}
+.header-bg:hover{
+    margin-left:20px;
+}
+
+.hero-bg {
+    background-color:white;
+}
+
+
+.payicon{
+    border-radius: 20px;
+}
+.headerC{
+    border-radius: 50px;
+
+}
+
+.hr-width{
+    height:5px;
+    border-radius:5px;
+    background-color: #415feb;
+
+}
+
+.scroll-box {
+    width:100%;
+    height:300px;
+    border-radius:10px;
+}
+.canvasbalimg{
+    width: 100%;
+}
+.devpanel{
+    border-radius: 10px;
+    background: radial-gradient(circle, rgba(200,174,238,1) 0%, rgba(140,188,246,1) 100%);
+    padding-top: 20px;
+    padding-bottom: 70px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+/* .devpanel:hover{
+    background: radial-gradient(circle, rgba(200,150,200,1) 0%, rgba(120,188,246,1) 100%);
+    transition: .5s;
+
+} */
+
+.card{
+    box-shadow: 2px 2px 20px 1px ;
+    border-radius: 40px;
+    transition: .3s;
+    width:100%;
+    height:82%;
+}
+.card:hover{
+    box-shadow: 2px 2px 30px 5px ;
+    width:101%;
+    height:83%;
+}
+
+.card-1-bg{
+    background: radial-gradient(circle, rgba(113,137,185,1) 0%, rgba(100, 149, 237,1) 100%);
+}
+.card-2-bg{
+    background: radial-gradient(circle, rgba(20, 52, 164,1) 0%, rgba(93, 63, 211,1) 100%);
+    margin-left:25px;
+}
+.card-sub-text{
+    color:rgb(93, 63, 211);
+}
+
+.optioncard{
+    box-shadow: 2px 2px 20px 1px ;
+    border-radius: 25px;
+    transition: .3s;
+    width:100%;
+    height:100%;
+    padding-top:15px;
+    padding-bottom:50px;
+
+}
+.optioncard:hover{
+    box-shadow: 2px 2px 30px 5px ;
+    width:101%;
+    height:83%;
+}
+.cardsub-container{
+    border-radius: 10px;
+    padding-top:2px;
+    padding-bottom:2px;
+}
+.options-container{
+    padding-bottom:80px;
+}
+
+.payfrom{
+    border-radius:25px;
+    /* background: radial-gradient(circle, rgba(86,106,158,1) 0%, rgba(94,116,208,1) 36%, rgba(43,53,164,1) 92%); */
+}
+
+/* animation Cpay */
+
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
+
+
+.waviy {
+  position: relative;
+  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+  font-size: 60px;
+}
+.waviy span {
+  font-family: 'Alfa Slab One', cursive;
+  position: relative;
+  display: inline-block;
+  color: rgb(128, 159, 255);
+  /* text-transform: uppercase; */
+  animation: waviy 1s infinite;
+  animation-delay: calc(.1s * var(--i));
+  
+}
+@keyframes waviy {
+  0%,98,100% {
+    transform: translateY(0)
+  }
+  20% {
+    transform: translateY(-20px)
+  }
+}

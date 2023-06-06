@@ -1,0 +1,65 @@
+<!-- navbar -->
+<nav class="navbar navbar-light ">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white d-flex" href="#">
+        <img  src="https://media.istockphoto.com/id/538788248/vector/bank-icon-on-white-round-vector-button.jpg?s=170667a&w=0&k=20&c=UhMpZlkubFY8Mj8tFzSUfpkJ-A3lJvUSDr_BM1x_9S4=" alt="" width="30" height="24" class="d-inline-block align-text-top bankicon ms-3">
+        <h4 class="ms-2 mt-1">C-Pay</h4> 
+      </a>
+    </div>
+  </nav>
+
+<!-- register loading setup -->
+<div *ngIf="regSuccessMsg" class="container text-center text-info m-5">
+  <h2>
+    <img src="https://i.gifer.com/origin/24/24f34ce1c01d84fbbd6c972a9fc94dab_w200.gif" alt="">
+    Your data getting registered...Please Wait...
+  </h2>
+</div>
+
+  <!-- main content -->
+<div *ngIf="!regSuccessMsg" class="container-fluid">
+
+    <div class="row mb-5">
+        <div class="col-lg-6 pt-4 ">
+            <!-- image -->
+            <img class="w-100 mt-5 " src="https://static.vecteezy.com/system/resources/previews/005/868/392/non_2x/secure-payment-modern-flat-concept-for-web-banner-design-man-logs-into-online-bank-account-using-password-and-verifying-person-with-fingerprint-in-app-illustration-with-isolated-people-scene-vector.jpg" alt="">
+        </div>
+        <div class="col-lg-6 colright">
+            <!-- form content -->
+            <form [formGroup]="registerForm" (ngSubmit)="register()" class="border border-2 mt-5 p-5 formstyle">    <!--formgroup called here-->
+
+                <h1 class="text-center mb-4" style="color: rgb(4, 57, 30);"> Register Here</h1>
+                <div class="form-floating mb-3">
+
+                    <input type="email" name="acno" formControlName="acno" class="form-control" id="floatingInput" placeholder="Acc Number">  <!--input 1-->  <!--given name , formControlName-to connect ts variable and input  -->
+                    <div *ngIf="this.registerForm.get('acno')?.errors && this.registerForm.get('acno')?.touched" class="text-danger">Invalid Account Number</div>
+
+                    <label for="floatingInput">Account Number</label>
+                  </div>
+                  <div class="form-floating mb-3">
+
+                    <input type="email" name="username" formControlName="username" class="form-control" id="floatingInput1" placeholder="UserName">   <!--input 2-->
+                    <div *ngIf="this.registerForm.get('username')?.errors && this.registerForm.get('username')?.touched" class="text-danger">Invalid Username</div>
+
+                    <label for="floatingInput1">User Name</label>
+                  </div>
+                  <div class="form-floating">
+
+                    <input type="password" name="password" formControlName="password" class="form-control" id="floatingPassword" placeholder="Password">  <!--input 3-->
+                    <div *ngIf="this.registerForm.get('password')?.errors && this.registerForm.get('password')?.touched" class="text-danger">Invalid Password</div>
+
+                    <label for="floatingPassword">Password</label>
+                  </div>
+
+                  <!-- register error message -->
+                  <div class="text-danger mt-2 fw-bold">
+                    <!-- error msg -->
+                    {{regErrorMsg}}
+                  </div>
+
+                  <button type="submit" class="buttonlog btn">Register</button>  <!--added type='submit' and called event inside the top form tag-(ngsubmit)=""  -->
+                  <a routerLink="/" style="float: right; margin-top: 20px; text-decoration: none;">Continue ? Sign In</a>
+            </form>
+        </div>
+    </div>
+</div>

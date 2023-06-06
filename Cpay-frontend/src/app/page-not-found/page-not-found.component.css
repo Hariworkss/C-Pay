@@ -1,0 +1,26 @@
+.colright{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+    flex-direction: column;
+}
+.contentdiv{
+    margin-top: 4em;
+}
+.head1{
+    font-size: 60px;
+}
+
+.colleft{
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+    
+}
+img{
+    height: 80vh;
+}
+.btn-color{
+    background-color:#007dfe;
+}

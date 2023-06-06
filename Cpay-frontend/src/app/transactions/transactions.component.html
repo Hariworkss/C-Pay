@@ -1,0 +1,96 @@
+<!-- navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light pb-3 pt-3 " id="mainNav">
+    <div class="container">
+      <div class="d-flex justify-content-center align-content-center">
+        <h4 class="payicon ms-5 mt-1 bg-dark pt-1 pb-1 ps-2 pe-2 text-white">C</h4>
+        <h4 class="  navtextpay">-Pay</h4> 
+      </div>        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars ms-1"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav text-uppercase ms-auto me-5 py-4 py-lg-0 ">
+                <li class="nav-item"><a routerLink="/dashboard"  class="nav-link text-dark   fw-bold" >Home</a></li>
+                <li class="nav-item"><a class="nav-link text-dark   fw-bold" data-bs-toggle="offcanvas" href="#offcanvasExample">Balance</a></li>
+                <li class="nav-item"><a routerLink="/transaction" class="nav-link text-dark   fw-bold" >Transactions</a></li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle text-dark fw-bold" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Account
+                  </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <!-- <a  class="dropdown-item" >Edit Account</a> -->
+                  <a  class="dropdown-item ">Remove Account</a>
+                  <a  class="dropdown-item" >SignOut</a>
+      
+                </div>
+                </li>
+            </ul>
+           
+        </div>
+    </div>
+</nav>
+
+
+
+<!-- main -->
+
+<div  class="container-fluid mb-4 trans-container">
+    <div class="row">
+        <div class="col">
+            <h1 class="text-center fw-bolder  mt-5 pt-2 font-bold">Transaction History </h1>
+            <p class="mt-4 "></p>
+            <!-- search div -->
+            <div class="row mt-4 mb-2">
+                <div class="col-12  d-flex justify-content-center">
+                <h4 class="text-primary" >Your Account Number : {{CurrentAcnoNum}}</h4>
+                </div>
+                <div class="col">
+                    <!-- <button (click)="generatePDF()" class="btn btn-success">Export as PDF</button> -->
+                </div>
+            </div>
+            <!-- transaction details div -->
+           <div class="row mt-5">
+            <div class="col-12  d-flex justify-content-center">
+                <div class="w-50">
+                    <input  (keyup)="searchitem($event)" type="text" class="form-control border-dark" placeholder="Enter Transaction Type">
+                </div>
+
+            </div>
+           </div>
+            
+            <!-- table -->
+            <div class="container pt-3 table-container bg-light">
+
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">No</th>
+                        <th scope="col">Type</th>
+                        <th scope="col">From Acno</th>
+                        <th scope="col">To Acno</th>
+                        <th scope="col">Amount</th>
+    
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let trans of transaction | search:searchTerm:'type' let i=index">
+                        <th scope="row">{{i+1}}</th>
+                        <!-- credit and debit conditions -->
+                        <th *ngIf="trans.type=='Debit'" class="text-danger">{{trans.type}}</th>
+                        <th *ngIf="trans.type=='credit'" class="text-primary">{{trans.type}}</th>
+
+                        <td>{{trans.fromAcno}}</td>
+                        <td>{{trans.toAcno}}</td>
+                        <th class="text-success">{{trans.amount}}</th>
+    
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+
+            </div>
+
+        
+        </div>
+    </div>
+</div>

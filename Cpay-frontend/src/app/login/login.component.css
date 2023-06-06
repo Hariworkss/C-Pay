@@ -1,0 +1,42 @@
+/* .navbar{
+    background-color: #415feb;
+} */
+
+.navtextc{
+    border-radius: 20px;
+}
+.navtextpay{
+    margin-top:8px;
+    margin-left:4px;
+}
+.bankicon{
+    border-radius: 20px;
+    width: 45px;
+    height: 40px;
+}
+
+.buttonlog{
+    color: white;
+    width: 100%;
+    background-color: black;
+    margin-top: 15px;
+    transition: .2s;
+}
+.buttonlog:hover{
+    background-color: #390da0;
+}
+.colright{
+    padding-top: 80px;
+    padding-right:40px;
+}
+
+.formstyle{
+    box-shadow:2px 2px 10px ;
+    border-radius:20px;
+    transition:.4s;
+    
+}
+.formstyle:hover{
+    box-shadow:2px 2px 20px  #390da0;
+
+}
